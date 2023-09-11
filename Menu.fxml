@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1280.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PropertyController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #010829;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" focusTraversable="false" prefHeight="60.0" prefWidth="278.0" style="-fx-background-color: #010829;" text="Imperial" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="40.0" />
+               </font>
+            </Label>
+            <Separator maxHeight="40.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Pane prefHeight="60.0" prefWidth="366.0" style="-fx-background-color: #010829;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="topLabel" focusTraversable="false" layoutX="400.0" layoutY="17.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="217.0">
+               <children>
+                  <Label fx:id="userName" focusTraversable="false" prefHeight="29.0" prefWidth="141.0" text="User Name" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Pane prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #fff; -fx-border-width: 5px;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fx:id="profilePic" fitHeight="33.0" fitWidth="38.0" layoutX="5.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button layoutX="-1.0" layoutY="-3.0" mnemonicParsing="false" onAction="#openProfile" opacity="0.0" prefHeight="53.0" prefWidth="52.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" focusTraversable="true" prefHeight="543.0" prefWidth="281.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0" />
+            <Button fx:id="owned" mnemonicParsing="false" onAction="#showOwnerProperty" prefHeight="50.0" prefWidth="200.0" text="Owned" textFill="#03254c">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                     <image>
+                        <Image url="@../../../../Downloads/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="search" mnemonicParsing="false" onAction="#searchProperty" prefHeight="50.0" prefWidth="200.0" style="-fx-border-radius: 50%; -fx-border-color: #03254c; -fx-background-color: #fff;" text="Search" textFill="#010829">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                     <image>
+                        <Image url="@../../../../Downloads/magnifying-glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="sell" mnemonicParsing="false" onAction="#addPropertyToSale" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-border-color: #03254c; -fx-border-radius: 50%;" text="    Sell / Rent" textFill="#03254c">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="check" mnemonicParsing="false" onAction="#checkInterestedPeople" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-border-color: #03254c; -fx-border-radius: 50%;" text="Check" textFill="#03254c">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                     <image>
+                        <Image url="@../../../../Downloads/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="add" mnemonicParsing="false" onAction="#addNewProperty" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-border-color: #03254c; -fx-border-radius: 50%;" text="Add" textFill="#03254c">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" translateX="-25.0">
+                     <image>
+                        <Image url="@../../../../Downloads/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="at" mnemonicParsing="false" onAction="#soRentedProperties" prefHeight="50.0" prefWidth="200.0" text="Add Tenent" textFill="#03254c">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cb" mnemonicParsing="false" onAction="#openCompare" prefHeight="50.0" prefWidth="200.0" text="Compare" textFill="#03254c">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" translateX="-12.0">
+                     <image>
+                        <Image url="@../../../../Downloads/justice-scale.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFF; -fx-border-color: #03254c; -fx-border-radius: 50%;" text="logout" textFill="#03254c">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+                     <image>
+                        <Image url="@../../../../Downloads/logout.png" />
+                     </image></ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <Pane prefHeight="44.0" prefWidth="1200.0" style="-fx-background-color: #010829;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="458.0" layoutY="11.0" text="© 2023 IMPERIAL REAL ESTATES INC. ALL RIGHTS RESERVED." textFill="WHITE" />
+            <Label layoutX="1070.0" layoutY="14.0" text="Designed by Infinity." textFill="WHITE" />
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="pane2" prefHeight="540.0" prefWidth="992.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="p2c" layoutX="620.0" layoutY="154.0" mnemonicParsing="false" onAction="#chooseAnImage" text="Choose" />
+                  <TextField fx:id="pname" layoutX="94.0" layoutY="58.0" promptText="property name" />
+                  <TextField fx:id="pprice" layoutX="94.0" layoutY="106.0" promptText="property price" />
+                  <TextField fx:id="pstatus" layoutX="94.0" layoutY="154.0" promptText="property status" />
+                  <TextField fx:id="ptype" layoutX="94.0" layoutY="211.0" promptText="type" />
+                  <TextField fx:id="psize" layoutX="573.0" layoutY="58.0" promptText="size" />
+                  <TextField fx:id="ppincode" layoutX="340.0" layoutY="211.0" promptText="pincode" />
+                  <Button fx:id="p2s" layoutX="269.0" layoutY="396.0" mnemonicParsing="false" onAction="#saveToDatabase" text="submit" />
+                  <TextField fx:id="PC" layoutX="573.0" layoutY="106.0" promptText="PLUS CODE" />
+                  <ImageView fx:id="pimage1" fitHeight="150.0" fitWidth="200.0" layoutX="558.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect></ImageView>
+                  <ChoiceBox fx:id="country" layoutX="340.0" layoutY="58.0" prefWidth="150.0" value="India" />
+                  <ChoiceBox fx:id="state" layoutX="340.0" layoutY="106.0" prefWidth="150.0" value="Tamil Nadu" />
+                  <ChoiceBox fx:id="city" layoutX="340.0" layoutY="154.0" prefWidth="150.0" value="Chennai" />
+                  <ChoiceBox fx:id="price" layoutX="243.0" layoutY="106.0" prefHeight="25.0" prefWidth="45.0" />
+                  <ChoiceBox fx:id="type" layoutX="243.0" layoutY="211.0" prefHeight="25.0" prefWidth="45.0" />
+                  <ChoiceBox fx:id="status" layoutX="243.0" layoutY="154.0" prefHeight="25.0" prefWidth="45.0" />
+                  <ChoiceBox fx:id="size" layoutX="722.0" layoutY="58.0" prefHeight="25.0" prefWidth="44.0" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane fx:id="pane1" prefHeight="540.0" prefWidth="999.0" style="-fx-background-color: #FFF;">
+               <children>
+                  <ScrollPane fx:id="scroll" layoutX="-1.0" prefHeight="547.0" prefWidth="798.0">
+                     <content>
+                        <VBox fx:id="vbox" prefHeight="545.0" prefWidth="778.0" spacing="20.0">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </content></ScrollPane>
+                  <ChoiceBox fx:id="type" layoutX="818.0" layoutY="41.0" prefWidth="150.0" style="-fx-background-color: #fff; -fx-border-color: #010829;" value="All" />
+                  <Button layoutX="836.0" layoutY="487.0" mnemonicParsing="false" onAction="#searchbof" prefHeight="37.0" prefWidth="119.0" style="-fx-background-color: #fff; -fx-border-color: #010829; -fx-border-width: 1px;" text="Search">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <ChoiceBox fx:id="bhk" layoutX="818.0" layoutY="93.0" prefWidth="150.0" style="-fx-background-color: #fff; -fx-border-color: #010829;" value="Any" />
+                  <Slider fx:id="slider" blockIncrement="0.1" layoutX="797.0" layoutY="225.0" majorTickUnit="0.1" max="2.0" minorTickCount="0" prefHeight="14.0" prefWidth="202.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+                  <Label fx:id="Range" layoutX="879.0" layoutY="182.0" text="Label" />
+                  <Label layoutX="918.0" layoutY="182.0" text="Lack" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+               <children>
+                  <ImageView fx:id="iimage" fitHeight="150.0" fitWidth="200.0" layoutX="27.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow />
+                     </effect></ImageView>
+                  <Label fx:id="iname" layoutX="293.0" layoutY="29.0" text="Label" />
+                  <HBox layoutX="634.0" layoutY="58.0" prefHeight="62.0" prefWidth="352.0" style="-fx-border-color: #010829;">
+                     <children>
+                        <Label fx:id="ipid" prefHeight="97.0" prefWidth="410.0" text="Label">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ipprice" prefHeight="100.0" prefWidth="439.0" text="Label">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="113.0" prefWidth="16.0" style="-fx-background-color: #0000ff;" text="Label" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="8.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane layoutX="1.0" layoutY="223.0" prefHeight="323.0" prefWidth="997.0">
+                     <content>
+                        <VBox fx:id="vbox1" prefHeight="323.0" prefWidth="1004.0" spacing="10.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></VBox>
+                     </content>
+                  </ScrollPane>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="182.0" prefHeight="45.0" prefWidth="1001.0" style="-fx-background-color: #010829;" text="Your Wishlist" textAlignment="CENTER" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="602.0" layoutY="18.0" orientation="VERTICAL" prefHeight="147.0" prefWidth="0.0" />
+                  <Label alignment="CENTER" layoutX="604.0" layoutY="-3.0" prefHeight="41.0" prefWidth="405.0" style="-fx-background-color: #010829;" text="RENTAL" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="607.0" layoutY="-1.0" prefWidth="400.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane3" prefHeight="537.0" prefWidth="1000.0" style="-fx-background-color: #010829;">
+               <children>
+                  <ImageView fitHeight="531.0" fitWidth="951.0" layoutX="-1.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                     <image>
+                        <Image url="@../../../../Downloads/IRE%20LOGIN.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

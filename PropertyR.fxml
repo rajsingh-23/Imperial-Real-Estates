@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PRegisteryController">
+   <children>
+      <Button layoutX="355.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseAnImage" text="Choose" />
+      <TextField fx:id="pname" layoutX="47.0" layoutY="36.0" promptText="property name" />
+      <TextField fx:id="pprice" layoutX="47.0" layoutY="90.0" promptText="property price" />
+      <TextField fx:id="pstatus" layoutX="47.0" layoutY="140.0" promptText="property status" />
+      <TextField fx:id="ptype" layoutX="47.0" layoutY="189.0" promptText="type" />
+      <TextField fx:id="psize" layoutX="47.0" layoutY="241.0" promptText="size" />
+      <TextField fx:id="ppincode" layoutX="354.0" layoutY="90.0" promptText="pincode" />
+      <Button layoutX="383.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveToDatabase" text="submit" />
+      <TextField fx:id="PC" layoutX="354.0" layoutY="140.0" text="PLUS CODE" />
+      <ChoiceBox fx:id="country" layoutX="47.0" layoutY="286.0" prefWidth="150.0" value="India" />
+      <ChoiceBox fx:id="state" layoutX="47.0" layoutY="338.0" prefWidth="150.0" value="Tamil Nadu" />
+      <ChoiceBox fx:id="city" layoutX="354.0" layoutY="36.0" prefWidth="150.0" value="Chennai" />
+      <ImageView fx:id="pimage" fitHeight="84.0" fitWidth="105.0" layoutX="451.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="paddress" layoutX="352.0" layoutY="267.0" prefHeight="63.0" prefWidth="156.0" />
+   </children>
+</AnchorPane>

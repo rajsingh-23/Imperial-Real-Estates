@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <ImageView fitHeight="436.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/signup.gif" />
+         </image>
+      </ImageView>
+      <TextField fx:id="fuserid" layoutX="274.0" layoutY="92.0" prefHeight="41.0" prefWidth="193.0" promptText="Enter User ID" style="-fx-border-color: #010829;" />
+      <PasswordField fx:id="fpassword" layoutX="275.0" layoutY="158.0" prefHeight="41.0" prefWidth="193.0" promptText="Enter Password" style="-fx-border-color: #010829;" />
+      <Button layoutX="276.0" layoutY="241.0" mnemonicParsing="false" onAction="#login" prefHeight="41.0" prefWidth="193.0" style="-fx-background-color: #010829;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="327.0" layoutY="351.0" prefHeight="17.0" prefWidth="125.0" text="Real Estates Inc." />
+   </children>
+</AnchorPane>

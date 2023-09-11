@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpController">
+   <children>
+      <ImageView fitHeight="435.0" fitWidth="750.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/newsignup.gif" />
+         </image>
+      </ImageView>
+      <TextField fx:id="uname" layoutX="98.0" layoutY="35.0" promptText="Enter Full Name" />
+      <PasswordField fx:id="upassword" layoutX="98.0" layoutY="73.0" promptText="Enter New Password" />
+      <TextField fx:id="uphoneno" layoutX="98.0" layoutY="109.0" promptText="Enter Phone no" />
+      <TextField fx:id="uemail" layoutX="98.0" layoutY="147.0" promptText="Enter Email" />
+      <TextField fx:id="ugender" layoutX="98.0" layoutY="179.0" promptText="Gender" />
+      <Button layoutX="98.0" layoutY="263.0" mnemonicParsing="false" onAction="#chooseProfilePicture" text="Choose photo" />
+      <DatePicker fx:id="udob" layoutX="98.0" layoutY="214.0" promptText="Select DOB" />
+      <TextField fx:id="upincode" layoutX="338.0" layoutY="147.0" promptText="Enter Pincode" />
+      <TextArea fx:id="uaddress" layoutX="338.0" layoutY="179.0" prefHeight="61.0" prefWidth="149.0" promptText="Enter Address" />
+      <Button fx:id="singUP" layoutX="342.0" layoutY="263.0" mnemonicParsing="false" onAction="#singUp" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: #010829; -fx-border-color: #010829;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <ImageView fx:id="simage" fitHeight="55.0" fitWidth="65.0" layoutX="208.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true" />
+      <ChoiceBox fx:id="country" layoutX="338.0" layoutY="35.0" prefWidth="150.0" value="India" />
+      <ChoiceBox fx:id="state" layoutX="338.0" layoutY="73.0" prefWidth="150.0" value="Tamil Nadu" />
+      <ChoiceBox fx:id="city" layoutX="338.0" layoutY="109.0" prefWidth="150.0" value="Chennai" />
+      <Button layoutX="264.0" layoutY="365.0" mnemonicParsing="false" onAction="#openLogin" style="-fx-background-color: #fff;" text="Already an exisiting User." underline="true" />
+   </children>
+</AnchorPane>

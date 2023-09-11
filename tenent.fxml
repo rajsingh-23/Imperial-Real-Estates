@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.tController">
+   <children>
+      <TextField fx:id="tid" layoutX="138.0" layoutY="18.0" promptText="EnterTenent ID" style="-fx-border-color: #010829;" />
+      <Button layoutX="352.0" layoutY="18.0" mnemonicParsing="false" onAction="#fecthdata" style="-fx-background-color: #fff; -fx-border-color: #010829; -fx-border-radius: 50%;" text="Check" textFill="#010829" />
+      <Label fx:id="uid" layoutX="558.0" layoutY="14.0" visible="false" />
+      <Label fx:id="uname" layoutX="213.0" layoutY="103.0" />
+      <Label fx:id="uphone" layoutX="213.0" layoutY="143.0" />
+      <Label fx:id="uemail" layoutX="213.0" layoutY="183.0" />
+      <ImageView fx:id="uimage" fitHeight="144.0" fitWidth="175.0" layoutX="14.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow />
+         </effect></ImageView>
+      <Button layoutX="506.0" layoutY="351.0" mnemonicParsing="false" onAction="#addTenent" style="-fx-background-color: #fff; -fx-border-radius: 50%; -fx-border-color: #010829;" text="Confirm" textFill="#010829" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#openmenu" style="-fx-border-color: #010829; -fx-background-color: #fff; -fx-border-radius: 50%;" text="⬅ Back" textFill="#010829" />
+   </children>
+</AnchorPane>

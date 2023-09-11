@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KMController">
+   <bottom>
+      <Pane prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #03254c;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <Pane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #03254c;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="33.0" layoutY="6.0" mnemonicParsing="false" onAction="#openMenu" prefHeight="43.0" prefWidth="92.0" style="-fx-background-color: #03254c; -fx-border-color: #fff; -fx-border-radius: 50%; -fx-border-width: 2px;" text="⬅ Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+         </children></Pane>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label focusTraversable="false" layoutX="40.0" layoutY="14.0" prefHeight="27.0" prefWidth="171.0" text="Property Details :" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="pname" focusTraversable="false" layoutX="284.0" layoutY="63.0" prefHeight="27.0" prefWidth="244.0" text="name" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="42.0" layoutY="266.0" prefHeight="30.0" prefWidth="176.0" text="Owner Details :" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <ImageView fx:id="uimage" fitHeight="61.0" fitWidth="67.0" layoutX="40.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect></ImageView>
+            <Label fx:id="uname" layoutX="47.0" layoutY="377.0" prefHeight="27.0" prefWidth="210.0" text="name" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Button layoutX="766.0" layoutY="512.0" mnemonicParsing="false" onAction="#chat" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #fff; -fx-border-color: #03254c; -fx-border-radius: 50%; -fx-border-width: 2px;" text="Chat" textFill="#03254c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label fx:id="pid" layoutX="1224.0" layoutY="22.0" text="Label" visible="false" />
+            <Label fx:id="uid" layoutX="1258.0" layoutY="533.0" prefHeight="15.0" prefWidth="21.0" text="Label" visible="false">
+               <font>
+                  <Font size="8.0" />
+               </font></Label>
+            <Label fx:id="ptype" layoutX="351.0" layoutY="172.0" prefHeight="17.0" prefWidth="51.0" text="Label" />
+            <Label fx:id="pstatus" layoutX="478.0" layoutY="171.0" prefHeight="17.0" prefWidth="57.0" text="Label" />
+            <Label fx:id="psize" layoutX="477.0" layoutY="124.0" prefHeight="20.0" prefWidth="76.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="pprice" layoutX="348.0" layoutY="124.0" prefHeight="20.0" prefWidth="62.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="pcountry" layoutX="362.0" layoutY="203.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
+            <Label fx:id="pstate" layoutX="445.0" layoutY="203.0" prefHeight="17.0" prefWidth="56.0" text="Label" />
+            <Label fx:id="pcity" layoutX="518.0" layoutY="202.0" prefHeight="17.0" prefWidth="96.0" text="Label" />
+            <Label fx:id="ppincode" layoutX="626.0" layoutY="204.0" prefHeight="17.0" prefWidth="65.0" text="Label" />
+            <Label fx:id="uphoneNo" layoutX="137.0" layoutY="423.0" prefHeight="17.0" prefWidth="102.0" text="Label" />
+            <Label fx:id="uemail" layoutX="122.0" layoutY="448.0" prefHeight="17.0" prefWidth="132.0" text="Label" />
+            <Button layoutX="1121.0" layoutY="513.0" mnemonicParsing="false" onAction="#openweb" style="-fx-background-color: #fff; -fx-border-color: #03254c; -fx-border-radius: 50%; -fx-border-width: 2px;" text="Browse Web" textFill="#03254c">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <WebView fx:id="wv" focusTraversable="false" layoutX="707.0" layoutY="28.0" prefHeight="470.0" prefWidth="556.0">
+               <effect>
+                  <DropShadow />
+               </effect></WebView>
+            <Label layoutX="282.0" layoutY="124.0" prefHeight="20.0" prefWidth="54.0" text="PRICE : ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="414.0" layoutY="124.0" prefHeight="20.0" prefWidth="50.0" text="AREA :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="283.0" layoutY="171.0" prefHeight="17.0" prefWidth="53.0" text="TYPE :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="412.0" layoutY="172.0" prefHeight="17.0" prefWidth="55.0" text="STATUS :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="204.0" text="ADDRESS :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="31.0" layoutY="259.0" prefHeight="1.0" prefWidth="642.0" />
+            <Separator layoutX="264.0" layoutY="304.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Label layoutX="46.0" layoutY="423.0" prefHeight="17.0" prefWidth="79.0" text="PHONE NO :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="448.0" prefHeight="17.0" prefWidth="50.0" text="EMAIL :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <MediaView fx:id="video" fitHeight="200.0" fitWidth="300.0" layoutX="305.0" layoutY="287.0" />
+            <Button fx:id="plb" layoutX="311.0" layoutY="494.0" mnemonicParsing="false" onAction="#play" style="-fx-background-color: #FFF; -fx-border-color: #03254c; -fx-border-radius: 50%;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="pab" layoutX="401.0" layoutY="494.0" mnemonicParsing="false" onAction="#pause" style="-fx-background-color: #fff; -fx-border-color: #03254c; -fx-border-radius: 50%;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/music.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="rb" layoutX="504.0" layoutY="493.0" mnemonicParsing="false" onAction="#reset" style="-fx-background-color: #fff; -fx-border-color: #03254c; -fx-border-radius: 50%;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/restart.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fx:id="pimage1" fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/resize-1694357913371060713typea12bed1166sqft.jpeg" />
+               </image></ImageView>
+            <ImageView fx:id="pimage2" fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/resize-1694358082807907657typeb12bed1825sqft.jpeg" />
+               </image></ImageView>
+            <Button layoutX="28.0" layoutY="223.0" mnemonicParsing="false" onAction="#next" style="-fx-background-color: #FFF; -fx-border-color: #03254c; -fx-border-radius: 50%; -fx-border-width: 1px;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/left.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="218.0" layoutY="223.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FFF; -fx-border-color: #03254c; -fx-border-radius: 50%; -fx-border-width: 1px;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/next.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fx:id="pimage" fitHeight="159.0" fitWidth="217.0" layoutX="42.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow height="29.76" radius="14.6225" width="30.73" />
+               </effect></ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
